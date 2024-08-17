@@ -16,7 +16,7 @@ use std::str::FromStr;
 #[launch]
 fn rocket() -> _ {
     // Spécifie les origines autorisées
-    let allowed_origins = AllowedOrigins::some_exact(&["http://localhost:8000"]);
+    let allowed_origins = AllowedOrigins::some_exact(&["http://127.0.0.1:8080"]);
 
     // Configure les options CORS
     let cors = CorsOptions::default()
