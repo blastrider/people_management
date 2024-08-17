@@ -1,5 +1,3 @@
-use diesel::prelude::*;
-use diesel::r2d2::{self, ConnectionManager};
 use diesel_migrations::{embed_migrations, EmbeddedMigrations, MigrationHarness};
 use rocket_sync_db_pools::{database, diesel};
 
