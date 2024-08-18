@@ -1,7 +1,6 @@
 use crate::schema::users;
-use serde::{Deserialize, Serialize};
 use diesel::prelude::*;
-use diesel::pg::PgConnection;
+use serde::{Deserialize, Serialize};
 
 #[derive(Queryable, Serialize)]
 pub struct User {
