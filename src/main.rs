@@ -39,7 +39,10 @@ fn rocket() -> _ {
             routes![
                 routes::users::create::create_user,
                 routes::users::update::update_user,
-                routes::users::delete::delete_user
+                routes::users::delete::delete_user,
+                routes::users::shared_management::add_shared_account,
+                routes::users::shared_management::remove_shared_account,
+                routes::users::shared_management::get_shared_users
             ],
         )
 }
