@@ -13,7 +13,8 @@ create_user() {
       "password_hash": "hashed_password_example",
       "address": "123 Main St, Springfield",
       "phone_number": "+123456789",
-      "ssn": "123-45-6789"
+      "ssn": "123-45-6789",
+      "active": "true"
     }')
 
   echo "Response: $response"
@@ -61,3 +62,5 @@ if [ "$user_id" != "null" ]; then
 else
   echo "Failed to create user."
 fi
+
+## les autres tests avec les bons formats
