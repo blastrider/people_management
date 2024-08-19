@@ -19,6 +19,7 @@ diesel::table! {
         phone_number -> Nullable<Varchar>,
         ssn -> Nullable<Varchar>,
         active -> Nullable<Bool>,
+        email -> Varchar,
     }
 }
 

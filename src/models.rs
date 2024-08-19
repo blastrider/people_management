@@ -13,6 +13,7 @@ pub struct User {
     pub phone_number: Option<String>,
     pub ssn: Option<String>,
     pub active: Option<bool>,
+    pub email: String,
 }
 
 #[derive(Insertable, Deserialize, Selectable)]
@@ -25,6 +26,7 @@ pub struct NewUser {
     pub phone_number: Option<String>,
     pub ssn: Option<String>,
     pub active: bool,
+    pub email: String,
 }
 
 #[derive(AsChangeset, Deserialize, Selectable)]
