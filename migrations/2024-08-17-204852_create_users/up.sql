@@ -6,6 +6,7 @@ CREATE TABLE users (
     password_hash VARCHAR NOT NULL,
     address VARCHAR,
     phone_number VARCHAR,
-    ssn VARCHAR
+    ssn VARCHAR,
+    active BOOLEAN
 );
 
