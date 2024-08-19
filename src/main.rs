@@ -42,7 +42,10 @@ fn rocket() -> _ {
                 routes::users::delete::delete_user,
                 routes::users::shared_management::add_shared_account,
                 routes::users::shared_management::remove_shared_account,
-                routes::users::shared_management::get_shared_users
+                routes::users::shared_management::get_shared_users,
+                routes::users::inactive_management::deactivate_user,
+                routes::users::inactive_management::activate_user,
+                routes::users::inactive_management::check_user_status
             ],
         )
 }
