@@ -1,11 +1,12 @@
 Voici une documentation au format Markdown pour le script Bash `user_management.sh` que nous avons créé. Cette documentation décrit les fonctionnalités du script et explique comment l'utiliser.
 
-```markdown
+````markdown
 # Documentation pour le Script `user_management.sh`
 
 ## Introduction
 
 Ce script Bash permet de gérer les utilisateurs via une API REST. Il offre les fonctionnalités suivantes :
+
 - Création d'un utilisateur
 - Modification d'un utilisateur
 - Suppression d'un utilisateur
@@ -24,6 +25,7 @@ Sur Ubuntu/Debian :
 ```bash
 sudo apt-get install jq
 ```
+````
 
 Sur macOS (avec Homebrew) :
 
@@ -100,3 +102,7 @@ Le script est composé des sections suivantes :
 ## Conclusion
 
 Ce script offre un moyen simple de gérer les utilisateurs via une API REST. Vous pouvez l'utiliser tel quel ou le modifier selon vos besoins spécifiques.
+
+# Disclaimer
+
+Je fais ça pour m'entrainer, ça compile mais ne mettez pas ça en production, ça peut servir de base à retravailler en revanche
