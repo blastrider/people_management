@@ -7,6 +7,7 @@ CREATE TABLE users (
     address VARCHAR,
     phone_number VARCHAR,
     ssn VARCHAR,
-    active BOOLEAN
+    active BOOLEAN,
+    email VARCHAR NOT NULL
 );
 
