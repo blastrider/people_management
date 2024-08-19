@@ -1,11 +1,15 @@
-use rocket::serde::json::Json;
-use rocket::response::status::BadRequest;
 use crate::db::DbConn;
-use crate::models::{User, UpdateUser};
+use crate::models::{UpdateUser, User};
 use diesel::prelude::*;
+use rocket::response::status::BadRequest;
+use rocket::serde::json::Json;
 
 #[put("/users/<user_id>", data = "<updated_user>")]
-pub async fn update_user(conn: DbConn, user_id: i32, updated_user: Json<UpdateUser>) -> Result<Json<User>, BadRequest<String>> {
+pub async fn update_user(
+    conn: DbConn,
+    user_id: i32,
+    updated_user: Json<UpdateUser>,
+) -> Result<Json<User>, BadRequest<String>> {
     use crate::schema::users::dsl::*;
 
     let updated_user = updated_user.into_inner();
@@ -15,6 +19,6 @@ pub async fn update_user(conn: DbConn, user_id: i32, updated_user: Json<UpdateUs
             .get_result(c)
             .map(Json)
             .map_err(|e| BadRequest(Some(format!("Error: {}", e)).unwrap_or_default()))
-    }).await
+    })
+    .await
 }
-
