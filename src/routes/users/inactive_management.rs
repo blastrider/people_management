@@ -52,6 +52,7 @@ pub async fn check_user_status(conn: DbConn, user_id: i32) -> Result<String, Bad
 
     match user_status {
         Ok(status) => {
+            // TODO: Make this Errors messages really cathed
             if Some(status).is_some() {
                 Ok("User is active".to_string())
             } else {
