@@ -3,6 +3,7 @@
 ## Introduction
 
 Cette API permet de gérer les utilisateurs dans un système. Elle offre les fonctionnalités suivantes :
+
 - Création d'un utilisateur
 - Modification d'un utilisateur existant
 - Suppression d'un utilisateur
@@ -139,3 +140,8 @@ curl -X DELETE http://localhost:8000/api/users/1
 
 Cette API offre un moyen simple de gérer les utilisateurs au sein d'une application. Vous pouvez utiliser des outils comme `curl` ou des clients HTTP pour interagir avec l'API. Assurez-vous de toujours envoyer des données bien formatées pour éviter les erreurs.
 
+# Code à venir :
+
+[] Module de sécurité ( controle de format adresses mail )
+[] Anti Brute-force
+[] Optimisation de performance
