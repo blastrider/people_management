@@ -18,9 +18,13 @@ diesel::table! {
         address -> Nullable<Varchar>,
         phone_number -> Nullable<Varchar>,
         ssn -> Nullable<Varchar>,
+        active -> Nullable<Bool>,
     }
 }
 
 diesel::joinable!(shared_accounts -> users (user_id));
 
-diesel::allow_tables_to_appear_in_same_query!(shared_accounts, users,);
+diesel::allow_tables_to_appear_in_same_query!(
+    shared_accounts,
+    users,
+);
